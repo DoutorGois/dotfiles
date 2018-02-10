@@ -7,8 +7,9 @@
 	set dir=/tmp/
 	set relativenumber 
 	set number
-
+	set path+=**
 	set cursorline
+	set wildmenu
 	hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
 
 	set hlsearch
