@@ -1,3 +1,4 @@
+install_folder=$(dirname $(readlink -f "$0"))
 prompt_install() {
 	echo -n "$1 is not installed. Would you like to install it? (y/n) " >&2
 	old_stty_cfg=$(stty -g)
@@ -92,9 +93,9 @@ else
 	echo -e "\nNot backing up old dotfiles."
 fi
 
-printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
-printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
-printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
+printf "source '$install_folder/zsh/zshrc_manager.sh'" > ~/.zshrc
+printf "so $install_folder/vim/vimrc.vim" > ~/.vimrc
+printf "source-file $install_folder/tmux/tmux.conf" > ~/.tmux.conf
 
 echo
 echo "Please log out and log back in for default shell to be initialized."
