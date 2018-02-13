@@ -1,6 +1,8 @@
 set -g default-terminal "screen-256color"
 
-source-file '/home/zetdg/dotfiles/drgois/tmux/tmux-keybindings.conf'
+DOTPATH='/home/zetdg/dotfiles/drgois'
+#source-file ~/dotfiles/tmux/tmux-keybindings.conf
+source-file $DOTPATH.'/tmux/tmux-keybindings.conf'
 
 # 
 bind -T copy-mode-vi y send-keys -X copy-pipe "xclip -sel clip -i"

@@ -1,4 +1,4 @@
-install_folder=$(dirname $(readlink -f "$0"))
+export DOTPATH=$(dirname $(readlink -f "$0"))
 prompt_install() {
 	echo -n "$1 is not installed. Would you like to install it? (y/n) " >&2
 	old_stty_cfg=$(stty -g)
@@ -93,9 +93,18 @@ else
 	echo -e "\nNot backing up old dotfiles."
 fi
 
-printf "source '$install_folder/zsh/zshrc_manager.sh'" > ~/.zshrc
-printf "so $install_folder/vim/vimrc.vim" > ~/.vimrc
-printf "source-file $install_folder/tmux/tmux.conf" > ~/.tmux.conf
+
+printf "source '$DOTPATH/zsh/zshrc_manager.sh'" > ~/.zshrc
+printf "so $DOTPATH/vim/vimrc.vim" > ~/.vimrc
+printf "source-file $DOTPATH/tmux/tmux.conf" > ~/.tmux.conf
 
 echo
 echo "Please log out and log back in for default shell to be initialized."
+
+sed -i.bak "s@export DOTPATH=.*\$@@g" ~/.zshrc
+#sed -i.bak "s@^@export DOTPATH='"$DOTPATH"'\n" ~/.zshrc
+echo "export DOTPATH='$DOTPATH'\n$(cat ~/.zshrc)" > ~/.zshrc
+export DOTPATH=$DOTPATH
+
+sed -i.bak "s@source-file.*\$@source-file '"$DOTPATH"/tmux/tmux-keybindings.conf'@g" $DOTPATH/tmux/tmux.conf
+
