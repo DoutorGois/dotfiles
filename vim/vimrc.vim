@@ -1,3 +1,11 @@
+call plug#begin()
+Plug 'https://github.com/scrooloose/nerdtree'
+Plug 'https://github.com/scrooloose/nerdcommenter'
+Plug 'https://github.com/garbas/vim-snipmate'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+Plug 'https://github.com/vim-syntastic/syntastic'
+call plug#end()
+colorscheme ron 
 " General Vim settings
 	syntax on
 	let mapleader=","
@@ -10,7 +18,8 @@
 	set path+=**
 	set cursorline
 	set wildmenu
-	hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
+	
+	highlight Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
 
 	set hlsearch
 	nnoremap <C-l> :nohl<CR><C-l>:echo "Search Cleared"<CR>
@@ -19,7 +28,6 @@
 
 	nnoremap n nzzzv
 	nnoremap N Nzzzv
-
 	nnoremap H 0
 	nnoremap L $
 	nnoremap J G
