@@ -13,7 +13,7 @@ set nocp
 	"	Plug.vim
 		call plug#begin('~/.vim/bundle')
 		Plug 'Valloric/YouCompleteMe'
-		Plug 'vim-latex/vim-latex'
+		"Plug 'vim-latex/vim-latex'
 		Plug 'fatih/vim-go'
 		Plug 'kien/ctrlp.vim'
 		Plug 'honza/vim-snippets'
