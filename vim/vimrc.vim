@@ -1,10 +1,5 @@
-call plug#begin()
-Plug 'https://github.com/scrooloose/nerdtree'
-Plug 'https://github.com/scrooloose/nerdcommenter'
-Plug 'https://github.com/garbas/vim-snipmate'
-Plug 'https://github.com/ctrlpvim/ctrlp.vim'
-Plug 'https://github.com/vim-syntastic/syntastic'
-call plug#end()
+set nocp
+call pathogen#infect()
 colorscheme ron 
 " General Vim settings
 	syntax on
