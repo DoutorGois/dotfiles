@@ -49,6 +49,8 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
 fi
 
 source $DOTPATH/zsh/prompt.sh
+alias vrc='vim $DOTPATH/vim/vimrc.vim'
+
 git config --global user.email "dr.gois88@gmail.com"
 git config --global user.name "DoutorGois"
 git config --global core.editor vim

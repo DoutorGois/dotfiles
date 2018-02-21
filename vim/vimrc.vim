@@ -1,5 +1,33 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs 
+	\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 set nocp
-call pathogen#infect()
+
+"	Select plugin manager
+	"	Pathogen
+		"call pathogen#infect()
+	
+	"	Plug.vim
+		call plug#begin('~/.vim/bundle')
+		Plug 'Valloric/YouCompleteMe'
+		Plug 'vim-latex/vim-latex'
+		Plug 'fatih/vim-go'
+		Plug 'kien/ctrlp.vim'
+		Plug 'honza/vim-snippets'
+		Plug 'majutsushi/tagbar'
+		Plug 'godlygeek/tabular'
+		Plug 'scrooloose/nerdcommenter'
+		Plug 'lervag/vimtex'
+		Plug 'scrooloose/syntastic'
+		Plug 'easymotion/vim-easymotion'
+		Plug 'vim-airline/vim-airline-themes'
+		Plug 'scrooloose/nerdtree'
+		Plug 'tpope/vim-fugitive'
+		call plug#end()
+
 colorscheme ron 
 " General Vim settings
 	syntax on
