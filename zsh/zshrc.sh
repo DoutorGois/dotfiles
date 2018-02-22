@@ -55,7 +55,7 @@ git config --global user.email "dr.gois88@gmail.com"
 git config --global user.name "DoutorGois"
 git config --global core.editor vim
 git config --global merge.tool vimdiff
-alias yoda01_jupyter='sudo docker run -it -p 8443:8888 -v /home/zetdg/data:/home/jovyan -v /home/zetdg/notebook:/home/jovyan/notebook -v /mnt/nfs/dados_nas/proc:/home/jovyan/proc -v /mnt/nfs/dados_nas/raw:/home/jovyan/raw -v /mnt/nfs/dados_nas/digest:/home/jovyan/digest -v /mnt/nfs/dados_nas/report:/home/jovyan/report -e NB_UID=1000 -e NB_GID=100 -e GRANT_SUDO=yes jupyter/datascience-notebook start-notebook.sh --NotebookApp.token=\'\'
+alias yoda01_jupyter="sudo docker run -it -p 8443:8888 -v /home/zetdg/data:/home/jovyan -v /home/zetdg/notebook:/home/jovyan/notebook -v /mnt/nfs/dados_nas/proc:/home/jovyan/proc -v /mnt/nfs/dados_nas/raw:/home/jovyan/raw -v /mnt/nfs/dados_nas/digest:/home/jovyan/digest -v /mnt/nfs/dados_nas/report:/home/jovyan/report -e NB_UID=1000 -e NB_GID=100 -e GRANT_SUDO=yes jupyter/datascience-notebook start-notebook.sh --NotebookApp.token=''"
 
 mkdir -p $HOME/.vim
 
