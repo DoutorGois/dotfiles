@@ -11,22 +11,34 @@ set nocp
 		"call pathogen#infect()
 	
 	"	Plug.vim
+		
 		call plug#begin('~/.vim/bundle')
 		Plug 'Valloric/YouCompleteMe'
-		"Plug 'vim-latex/vim-latex'
-		Plug 'fatih/vim-go'
-		Plug 'kien/ctrlp.vim'
-		Plug 'honza/vim-snippets'
-		Plug 'majutsushi/tagbar'
-		Plug 'godlygeek/tabular'
-		Plug 'scrooloose/nerdcommenter'
-		Plug 'lervag/vimtex'
-		Plug 'scrooloose/syntastic'
-		Plug 'easymotion/vim-easymotion'
-		Plug 'vim-airline/vim-airline-themes'
+"		Plug 'fatih/vim-go'
 		Plug 'scrooloose/nerdtree'
-		Plug 'tpope/vim-fugitive'
+		Plug 'scrooloose/nerdcommenter'
+"		Plug 'godlygeek/tabular'
+"		Plug 'easymotion/vim-easymotion'
+"		Plug 'kien/ctrlp.vim'
+"		Plug 'majutsushi/tagbar'
+"		Plug 'vim-airline/vim-airline-themes'
+"		Plug 'tpope/vim-fugitive'
+"		Plug 'SirVer/ultisnips'
+
+		"Vimtex
+		Plug 'lervag/vimtex'
+		Plug 'honza/vim-snippets'
+		"Plug 'w0rp/ale'
+		Plug 'neomake/neomake'
+"		Plug 'syntastic/syntastic'
+		Plug 'SirVer/ultisnips'
+		Plug 'Shougo/neosnippet.vim'
+		"Plug 'ludovicchabant/vim-gutentags'
+
+		"Plug 'vim-latex/vim-latex'
 		call plug#end()
+
+		let g:vimtex_view_method = 'zathura'
 
 colorscheme ron 
 " General Vim settings
