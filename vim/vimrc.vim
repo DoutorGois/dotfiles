@@ -83,6 +83,11 @@ colorscheme ron
 	set mouse=a
 	set incsearch
 
+" Copying over ssh
+"	vmap "+y :!xclip -f -sel clip
+"	map "+p :r!xclip -o -sel clip
+
+
 " Language Specific
 	" General
 		inoremap <leader>for <esc>Ifor (int i = 0; i < <esc>A; i++) {<enter>}<esc>O<tab>
