@@ -40,7 +40,6 @@ set nocp
 
 		let g:vimtex_view_method = 'zathura'
 		let g:tex_flavor = 'latex'
-
 colorscheme ron 
 " General Vim settings
 	syntax on
@@ -131,6 +130,12 @@ colorscheme ron
 	
 	nnoremap <F7> :tabp<CR>
 	nnoremap <F8> :tabn<CR>
+
+" Quickfix Window Errors
+
+	nnoremap <F5> :cn<CR>
+	nnoremap <F6> :cnf<CR>
+	nnoremap <S-F5> :cw<CR>
 " Return to the same line you left off at
 	augroup line_return
 		au!

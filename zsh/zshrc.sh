@@ -63,3 +63,10 @@ ln -sfn $DOTPATH/vim/autoload $HOME/.vim
 ln -sfn $DOTPATH/vim/bundle $HOME/.vim
 
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+
+vtex(){
+	vim --servername vim "$1"
+}
+
+#alias vtex='$(vim --servername vim $0)'
