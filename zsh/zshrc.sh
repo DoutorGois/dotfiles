@@ -70,7 +70,7 @@ vtex(){
 	vim --servername vim "$1"
 }
 
-alias vdoc='vtex ~/doutorado/main.tex'
+alias vdoc='cd ~/doutorado && vtex ~/doutorado/main.tex'
 
 #alias vtex='$(vim --servername vim $0)'
 alias ssh_yoda1="ssh -X -L 8888:yoda01.neuro.ufrn.br:8443 zetdg@yoda01.neuro.ufrn.br -p2222 -t 'tmux a -t Generic || tmux new -s Generic'"
